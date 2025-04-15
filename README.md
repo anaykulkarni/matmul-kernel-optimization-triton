@@ -1,3 +1,5 @@
+# Triton: Fused Kernel Implementation for Matmul+ReLu
+
 We create a Triton-based implementation of a matrix multiplication + ReLU + add kernel. The kernel computes the matrix function **D = ReLU(A × B + C)** where **A** is of shape *(M, K)*, **B** is of shape *(K, N)*, and **C & D** are of shape *(M, N)*. We will break the kernel down into four main steps:
 
 1. **Tile Assignment**  
